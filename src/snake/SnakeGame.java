@@ -6,7 +6,7 @@ import java.awt.*;
 public class SnakeGame extends JFrame {
 
     public SnakeGame(){
-
+        System.out.println("snake Game");
         setTitle("Snake Game");//게임 타이틀
         setSize(300,300);//프레임 사이즈
         setLocationRelativeTo(null);//창 중앙으로
