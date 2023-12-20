@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7336ecde-7be0-458c-9b6e-388d763f88c8" name="Changes" comment="게임패널에 키보드 이벤트 걸음.">
+    <list default="true" id="7336ecde-7be0-458c-9b6e-388d763f88c8" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snake/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snake/GamePanel.java" afterDir="false" />
     </list>
@@ -105,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702908584695</updated>
       <workItem from="1702908585773" duration="6175000" />
-      <workItem from="1702945883368" duration="27336000" />
+      <workItem from="1702945883368" duration="29672000" />
     </task>
     <task id="LOCAL-00001" summary="ㅏㅏㅏ">
       <option name="closed" value="true" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703055398836</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="...">
+      <option name="closed" value="true" />
+      <created>1703061094543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703061094543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +156,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ㅏㅏㅏ" />
     <MESSAGE value="게임패널에 키보드 이벤트 걸음." />
-    <option name="LAST_COMMIT_MESSAGE" value="게임패널에 키보드 이벤트 걸음." />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -163,9 +172,9 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/snake/SnakeGame.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/snake/GamePanel.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

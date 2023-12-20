@@ -78,9 +78,12 @@ public class GamePanel extends JPanel implements KeyListener{
                 //x축 y축 배열 한칸씩 땡겨서 이동 구현 ( 머리 위치 (x[0] , y[0] 변경 하면서 이동 구현)
                 //x[0] = x[i - 1]  식으로 할당 후 switch 문으로 x축 y 축 이동 구현
 
-                System.out.println(x[0] -=BOX_SIZE);
+//                System.out.println(x[0] -=BOX_SIZE);
 
-
+                for (int i = bodyParts; i > 0; i--){
+                    x[i] = x[i-1];
+                    y[i] = y[i-1];
+                }
 
 
 
