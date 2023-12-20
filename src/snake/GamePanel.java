@@ -10,8 +10,9 @@ import java.sql.Time;
 
 public class GamePanel extends JPanel implements KeyListener{
     private static final int DELAY = 200;
-    private final int[] x = new int[300];
-    private final int[] y = new int[300];
+    private final int[] x = new int[300]; //50 40 30 20 10 0
+                                          //40 30 20 ...
+    private final int[] y = new int[300]; //50 50 50 50 50 50
 
     private final int ALL_DOTS = 900;
 
@@ -19,10 +20,12 @@ public class GamePanel extends JPanel implements KeyListener{
     private int bodyParts = 6; //뱀 길이
 
     private int BOX_SIZE = 10;  //뱀 굵기
+    private char direction;
 
 
     public GamePanel(){
         System.out.println("GamePanel");
+        //키보드 입력 반응 하게 설정.
         setFocusable(true);
         addKeyListener(this);
         //지렁이 위치 초기화
@@ -62,6 +65,7 @@ public class GamePanel extends JPanel implements KeyListener{
 //                boolean running = true;
                 if (running){
                     System.out.println("app running.....");
+                    //keyPressed 에서 방향키로 할당 한 데이터 활용 하여 이동.
                     move();
                     //간식 생성
                     //충돌처리
@@ -71,7 +75,14 @@ public class GamePanel extends JPanel implements KeyListener{
 
             private void move() {
                 System.out.println("move...");
-                //x축 y축 배열 한칸씩 땡겨서 이동 구현
+                //x축 y축 배열 한칸씩 땡겨서 이동 구현 ( 머리 위치 (x[0] , y[0] 변경 하면서 이동 구현)
+                //x[0] = x[i - 1]  식으로 할당 후 switch 문으로 x축 y 축 이동 구현
+
+                System.out.println(x[0] -=BOX_SIZE);
+
+
+
+
 
 
             }
@@ -94,10 +105,23 @@ public class GamePanel extends JPanel implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_LEFT){
-            System.out.println("go LEFT>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        //방향키 입력 하여 방향변수 할당 : 'R' 우 / 'L' 좌 ...
 
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_LEFT:
+                direction = 'L';
+                break;
+            case KeyEvent.VK_RIGHT:
+                direction = 'R';
+                break;
+            case KeyEvent.VK_UP:
+                direction = 'u';
+                break;
+            case KeyEvent.VK_DOWN:
+                direction = 'D';
+                break;
         }
+
     }
 
     @Override
