@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7336ecde-7be0-458c-9b6e-388d763f88c8" name="Changes" comment="...">
+    <list default="true" id="7336ecde-7be0-458c-9b6e-388d763f88c8" name="Changes" comment="일단 움직이긴 함">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snake/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snake/GamePanel.java" afterDir="false" />
     </list>
@@ -105,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702908584695</updated>
       <workItem from="1702908585773" duration="6175000" />
-      <workItem from="1702945883368" duration="40648000" />
+      <workItem from="1702945883368" duration="43679000" />
     </task>
     <task id="LOCAL-00001" summary="ㅏㅏㅏ">
       <option name="closed" value="true" />
@@ -155,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703063729267</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="일단 움직이긴 함">
+      <option name="closed" value="true" />
+      <created>1703142288387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703142288387</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +173,8 @@
     <MESSAGE value="ㅏㅏㅏ" />
     <MESSAGE value="게임패널에 키보드 이벤트 걸음." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="일단 움직이긴 함" />
+    <option name="LAST_COMMIT_MESSAGE" value="일단 움직이긴 함" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

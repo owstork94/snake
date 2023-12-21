@@ -68,6 +68,11 @@ public class GamePanel extends JPanel implements KeyListener{
                     case 'D':
                         y[0] -= BOX_SIZE;
                         break;
+                    case 'E':
+                        y[0] = BOX_SIZE;
+                        x[0] = BOX_SIZE;
+                        break;
+
                 }
 
             }
@@ -136,12 +141,16 @@ public class GamePanel extends JPanel implements KeyListener{
                 System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+direction);
                 break;
             case KeyEvent.VK_UP:
-                direction = 'u';
+                direction = 'U';
                 System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+direction);
                 break;
             case KeyEvent.VK_DOWN:
                 direction = 'D';
                 break;
+            case KeyEvent.VK_SPACE:
+                direction = 'E';
+                break;
+
         }
 
     }
