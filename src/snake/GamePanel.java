@@ -14,7 +14,7 @@ public class GamePanel extends JPanel implements KeyListener{
                                           //40 30 20 ...
     private final int[] y = new int[300]; //50 50 50 50 50 50
 
-    private final int ALL_DOTS = 900;
+    private final int ALL_DOTS = 300;
 
     //size
     private int bodyParts = 6; //뱀 길이
@@ -28,6 +28,54 @@ public class GamePanel extends JPanel implements KeyListener{
         //키보드 입력 반응 하게 설정.
         setFocusable(true);
         addKeyListener(this);
+        Timer timer = new Timer(DELAY, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean running = true;
+                if (running){
+                    System.out.println("app running.....");
+                    //keyPressed 에서 방향키로 할당 한 데이터 활용 하여 이동.
+                    move();
+                    //간식 생성
+                    //충돌처리
+                }
+                repaint();
+            }
+
+            private void move() {
+
+                System.out.println("move...");
+                //x축 y축 배열 한칸씩 땡겨서 이동 구현 ( 머리 위치 (x[0] , y[0] 변경 하면서 이동 구현)
+                //x[0] = x[i - 1]  식으로 할당 후 switch 문으로 x축 y 축 이동 구현
+
+//                System.out.println(x[0] -=BOX_SIZE);
+
+                for (int i = bodyParts; i > 0; i--){
+                    x[i] = x[i-1];
+                    y[i] = y[i-1];
+                }
+
+                switch (direction){
+                    case 'R':
+                        x[0] += BOX_SIZE;
+                        break;
+                    case 'L':
+                        x[0] -= BOX_SIZE;
+                        break;
+                    case 'U':
+                        y[0] += BOX_SIZE;
+                        break;
+                    case 'D':
+                        y[0] -= BOX_SIZE;
+                        break;
+                }
+
+            }
+        });
+
+
+        timer.start();
+        moveSnake();
         //지렁이 위치 초기화
         //x축 50 ~ 0 까지 박스 하나씩 나열sp
         //y축 50으로 고정
@@ -44,7 +92,7 @@ public class GamePanel extends JPanel implements KeyListener{
         System.out.println("paintComponent");
             super.paintComponent(g);
             drawSnake(g);
-            moveSnake();
+
 
 //            g.fillRect(50,50,BOX_SIZE, BOX_SIZE);
 //        g.fillRect(40,50,BOX_SIZE, BOX_SIZE);
@@ -59,39 +107,7 @@ public class GamePanel extends JPanel implements KeyListener{
         int[] Y = new int[ALL_DOTS];
         boolean running = true;
         System.out.println(">>>");
-        Timer timer = new Timer(DELAY, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-//                boolean running = true;
-                if (running){
-                    System.out.println("app running.....");
-                    //keyPressed 에서 방향키로 할당 한 데이터 활용 하여 이동.
-                    move();
-                    //간식 생성
-                    //충돌처리
-                }
-                repaint();
-            }
 
-            private void move() {
-                System.out.println("move...");
-                //x축 y축 배열 한칸씩 땡겨서 이동 구현 ( 머리 위치 (x[0] , y[0] 변경 하면서 이동 구현)
-                //x[0] = x[i - 1]  식으로 할당 후 switch 문으로 x축 y 축 이동 구현
-
-//                System.out.println(x[0] -=BOX_SIZE);
-
-                for (int i = bodyParts; i > 0; i--){
-                    x[i] = x[i-1];
-                    y[i] = y[i-1];
-                }
-
-
-
-
-            }
-
-        });
-        timer.start();
     }
 
     private void drawSnake(Graphics g) {
@@ -113,12 +129,15 @@ public class GamePanel extends JPanel implements KeyListener{
         switch (e.getKeyCode()){
             case KeyEvent.VK_LEFT:
                 direction = 'L';
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+direction);
                 break;
             case KeyEvent.VK_RIGHT:
                 direction = 'R';
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+direction);
                 break;
             case KeyEvent.VK_UP:
                 direction = 'u';
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+direction);
                 break;
             case KeyEvent.VK_DOWN:
                 direction = 'D';
